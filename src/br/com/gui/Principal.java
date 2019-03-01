@@ -5,6 +5,8 @@
  */
 package br.com.gui;
 
+import br.com.ultilitarios.FundoTela;
+import java.awt.GridLayout;
 import javax.swing.JFrame;
 
 /**
@@ -12,13 +14,13 @@ import javax.swing.JFrame;
  * @author Alexander
  */
 public class Principal extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Principal
-     */
+    
     public Principal() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setLayout(new GridLayout());
+        FundoTela tela = new FundoTela("src/br/com/imagem/pizza-fundo.jpg");
+        getContentPane().add(tela);
     }
 
     /**
